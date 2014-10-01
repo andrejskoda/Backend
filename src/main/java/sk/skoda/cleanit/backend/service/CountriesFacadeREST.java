@@ -57,6 +57,7 @@ public class CountriesFacadeREST extends AbstractFacade<Countries> {
     @Path("{id}")
     @Produces({"application/xml", "application/json"})
     public Countries find(@PathParam("id") String id) {
+        System.out.println("### GET "+id+" called" );
         return super.find(id);
     }
 
@@ -64,6 +65,7 @@ public class CountriesFacadeREST extends AbstractFacade<Countries> {
     @Override
     @Produces({"application/xml", "application/json"})
     public List<Countries> findAll() {
+        System.out.println("### GET called" );
         return super.findAll();
     }
 

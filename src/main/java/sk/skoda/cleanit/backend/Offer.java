@@ -6,6 +6,7 @@
 package sk.skoda.cleanit.backend;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,10 +28,13 @@ public class Offer implements Serializable {
     @SequenceGenerator(name = "offer_seq", sequenceName = "offer_seq", allocationSize = 1)
     private Long id;
     
+    @Column(name = "title")
     private String title;
     
+    @Column(name = "detail")
     private String detail;
 
+    @ManyToOne
     private Client client;
     
     public Long getId() {
@@ -55,6 +59,14 @@ public class Offer implements Serializable {
 
     public void setDetail(String detail) {
         this.detail = detail;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
     
     @Override

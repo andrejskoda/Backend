@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
@@ -21,6 +22,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "offer")
+@XmlRootElement
 public class Offer implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

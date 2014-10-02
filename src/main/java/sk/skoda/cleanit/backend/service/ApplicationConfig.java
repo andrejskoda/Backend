@@ -31,7 +31,9 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(sk.skoda.cleanit.backend.NewCrossOriginResourceSharingFilter.class);
+        resources.add(sk.skoda.cleanit.backend.service.ClientFacadeREST.class);
         resources.add(sk.skoda.cleanit.backend.service.CountriesFacadeREST.class);
+        resources.add(sk.skoda.cleanit.backend.service.OfferFacadeREST.class);
     }
     
 }

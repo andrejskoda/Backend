@@ -17,14 +17,14 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import sk.skoda.cleanit.backend.Offer;
+import sk.skoda.cleanit.backend.entities.Offer;
 
 /**
  *
  * @author andrej
  */
 @Stateless
-@Path("sk.skoda.cleanit.backend.offer")
+@Path("offer")
 public class OfferFacadeREST extends AbstractFacade<Offer> {
     @PersistenceContext(unitName = "sk.skoda.cleanit_Backend_war_1.0-SNAPSHOTPU")
     private EntityManager em;

@@ -3,6 +3,9 @@
   <persistence-unit name="sk.skoda.cleanit_Backend_war_1.0-SNAPSHOTPU" transaction-type="JTA">
     <jta-data-source>jndi/postgres</jta-data-source>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+        <property name="javax.persistence.schema-generation.database.action" value="create"/>
+        <property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
     <properties/>
   </persistence-unit>
 </persistence>

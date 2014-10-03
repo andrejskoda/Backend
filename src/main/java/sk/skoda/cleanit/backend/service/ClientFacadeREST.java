@@ -17,14 +17,14 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import sk.skoda.cleanit.backend.Client;
+import sk.skoda.cleanit.backend.entities.Client;
 
 /**
  *
  * @author andrej
  */
 @Stateless
-@Path("sk.skoda.cleanit.backend.client")
+@Path("client")
 public class ClientFacadeREST extends AbstractFacade<Client> {
     @PersistenceContext(unitName = "sk.skoda.cleanit_Backend_war_1.0-SNAPSHOTPU")
     private EntityManager em;
